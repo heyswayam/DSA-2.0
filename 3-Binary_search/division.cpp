@@ -1,4 +1,5 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
 float div(int divident,int divisor, int dec)
 {
