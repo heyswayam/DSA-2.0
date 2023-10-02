@@ -32,5 +32,6 @@ float div(int divident,int divisor, int dec)
 int main()
 {
     cout << div(13,3,2);
+    // cout<<"a";
     return 0;
 }

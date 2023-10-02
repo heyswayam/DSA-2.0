@@ -4,46 +4,43 @@ using namespace std;
 
 string removeDuplicates(string s, int k)
 {
-    string ans = "";
+    string temp;
     int count = 0;
-    int times = k;
-
-    for (int i = 0; i < s.length(); i++)
+    for (auto ch : s)
     {
-        if (ans.length() - 1 >= k - 1)
+        if (temp.size() > 0 && count == k - 1)
         {
-            for (int j = ans.length() - 1; j >= k; i--)
+
+            int a = k;
+            while (a--)
             {
-                if (ans[j] != s[i])
+                temp.pop_back();
+            }
+            temp.push_back(ch);
+            count=0;
+        }
+
+        else
+        {
+            if (temp.size() > 0)
+            {
+                if (temp[temp.size() - 1] == ch)
                 {
-                    ans.push_back(s[i]);
-                    break;
+                    count++;
                 }
-                count++;
+                else count=0;
             }
-        }
-
-        else if (ans.length() - 1 < k - 1)
-        {
-            ans.push_back(s[i]);
-        }
-
-        else if (count == k - 1)
-        {
-            while (times - 1)
-            {
-                ans.pop_back();
-                times--;
-            }
+                temp.push_back(ch);
         }
     }
-    return ans;
+
+    return temp;
 }
 
 int main()
 {
-    string s="deeedbbcccbdaa";
-    int k=2;
-    cout<<"New string: "<<removeDuplicates(s,k);
+    string s = "abbbcd";
+    int k = 2;
+    cout << "New string: " << removeDuplicates(s, k);
     return 0;
 }
