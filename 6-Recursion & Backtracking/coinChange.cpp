@@ -64,8 +64,11 @@ int solve(vector<int> &coins, int amount)
         return 0;
     }
 
-    // if (amount < 0)
-    //     return INT_MAX;
+    if (amount < 0)
+    {
+        cout << "hello World" << endl;
+        return INT_MAX;
+    }
 
     int mini = INT_MAX;
 
