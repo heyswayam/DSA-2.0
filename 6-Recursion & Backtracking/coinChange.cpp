@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+/*
+itna krna hi q , kya hum aise nahi keh sakte ki n fences he unmese last ke 2 ko maine same color kr diya toh abhi bachi n-2 fences k-1 color baki he , aur agar 1 fence ko color krde toh n-1 fences bachi and k-1 color . aur unko paint krne ke tarike plus krlo ...
+*/
 // method 1
 // int coinChange(vector<int> coins, int amount)
 // {
