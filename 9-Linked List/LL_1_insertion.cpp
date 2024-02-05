@@ -13,6 +13,7 @@ public:
         this->next = NULL;
         this->data = data;
     }
+
 };
 
 void insertAtHead(Node *&head, int data)
@@ -110,25 +111,30 @@ void printLL(Node *head)
 
 int main()
 {
-    Node *first = new Node(10);
-    Node *second = new Node(15);
-    Node *third = new Node(93);
-    Node *fourth = new Node(30);
-    Node *head = first;
+    // Node *first = new Node(10);
+    // Node *second = new Node(15);
+    // Node *third = new Node(93);
+    // Node *fourth = new Node(30);
+    // Node *head = first;
+    Node first(2);
+    // first.data=2;
+    Node second(3);
+    first.next=&second;
 
-    first->next = second;
-    second->next = third;
-    third->next = fourth;
 
-    printLL(first);
+    // first->next = second;
+    // second->next = third;
+    // third->next = fourth;
+
+    printLL(&first);
 
     // insertAtHead(head, 23);
     // insertAtTail(head,47);
     // insertAtPos(head, 68, -2);
     // insertAtPos(head, 48, 23);
-    insertAtPos(head, 48, 60);
-    cout << endl;
-    printLL(head);
+    // insertAtPos(head, 48, 60);
+    // cout << endl;
+    // printLL(head);
 
 
     return 0;
