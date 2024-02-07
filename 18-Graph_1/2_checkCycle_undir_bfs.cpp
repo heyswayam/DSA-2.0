@@ -53,7 +53,8 @@ public:
                 // {
                 //     return true;
                 // }
-                else if (vis[child] == true && parent[frontNode] == child){
+                else if (vis[child] == true && parent[frontNode] == child)
+                {
                     continue;
                 }
                 else
@@ -70,7 +71,7 @@ int main()
 {
     Graph g;
     g.addEdge(0, 1, 0);
-    // g.addEdge(1, 2, 0);
+    g.addEdge(1, 2, 0);
     g.addEdge(1, 3, 0);
     g.addEdge(2, 4, 0);
     g.addEdge(3, 4, 0);

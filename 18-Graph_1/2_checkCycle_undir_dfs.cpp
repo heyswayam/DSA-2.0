@@ -28,28 +28,31 @@ public:
             cout << "}" << endl;
         }
     }
-    
-    bool checkCycle(int src, unordered_map<int, bool> &vis, int parent){
-        vis[src]=true;
-        bool ans=false;
+
+    bool checkCycle(int src, unordered_map<int, bool> &vis, int parent)
+    {
+        vis[src] = true;
+        bool ans = false;
         for (auto &child : edgeList[src])
         {
-            if(!vis[child]){
+            if (!vis[child])
+            {
                 // parent[child]=src;
-                ans = checkCycle(child,vis,src);
-                if(ans==true) return true;
+                ans = checkCycle(child, vis, src);
+                if (ans == true)
+                    return true;
             }
-            else if(vis[child]==true && parent==child)  //I was doing only if, so next conditions were getting executed
+            else if (vis[child] == true && parent == child) // I was doing only if, so next conditions were getting executed
             {
                 continue;
             }
-            else if(vis[child]==true && parent != child){
+            else if (vis[child] == true && parent != child)
+            {
                 return true;
             }
         }
         return ans;
     }
-
 };
 
 int main()
@@ -66,7 +69,7 @@ int main()
     // unordered_map<int, bool> parent;
     // parent[0]=-1;
     // bool ans = false;
-    cout<< g.checkCycle(0,vis,-1) << endl;
+    cout << g.checkCycle(0, vis, -1) << endl;
     // cout<<ans<<endl;
     return 0;
 }
