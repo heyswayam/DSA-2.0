@@ -20,8 +20,6 @@ void insertAtHead(Node *&head, int data)
 {
     Node *newnode = new Node(data);
 
-    Node *temp = head;
-
     newnode->next = head;
     head = newnode;
     // delete(newnode);

@@ -12,10 +12,7 @@ private:
 
 public:
     int wings = 2;
-    virtual // virtual keyword -> ignores below codes during compilation
-
-        void
-        sound()
+    virtual void sound() // virtual keyword -> ignores this function code during compilation
     {
         cout << "Bird making sound..." << endl;
         return;
