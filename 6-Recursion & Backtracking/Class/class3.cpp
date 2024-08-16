@@ -139,7 +139,7 @@ public:
         for(int i=0; i<coins.size(); i++) {
             int coin = coins[i];
 
-            //current coin ko sir tabhi use krenge 
+            //current coin ko sirf tabhi use krenge 
             //jab uski value <= amount hogi 
             if(coin <= amount) {
                 int recAns = solve(coins, amount - coin);
@@ -166,6 +166,7 @@ public:
 };
 
 //max sum of non-adjacent elements
+// house robber
 class Solution {
 public:
     int solve(vector<int>& nums, int size, int index) {
