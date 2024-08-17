@@ -11,3 +11,22 @@
 *.exe
 
 /Rough
+
+
+
+# //for the files when debugging
+# Ignore all files with no extensions
+**/[!.]*
+
+# Allow directories
+!*/
+
+# Allow files with extensions
+!**/*.*
+
+# Ignore hidden files (optional)
+.*
+
+
+# ignore all folders with .dySM extensions
+**/*.dSYM/
