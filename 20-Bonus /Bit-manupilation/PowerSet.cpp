@@ -34,6 +34,7 @@ void getSubsequences(string str)
 }
 int main()
 {
-    getSubsequences("abc");
+    // getSubsequences("abc");
+    cout << ((1 << 1));
     return 0;
 }
