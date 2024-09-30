@@ -96,15 +96,15 @@ void PintFirstNeg(int *arr, int n, int k = 3)
             cout << "0" << endl;
         else
         {
+        // purani window ka ans->
             cout << arr[dq.front()] << " ";
         }
-        // purani window ka ans->
-        // cout << arr[dq.front()] << " ";
+
         // removal
         // out of range index ko q mai se remove krdo
-
-        if (i - dq.front() >= k)
+        while (i - dq.front() >= k){
             dq.pop_front();
+        }
 
         // addition
         if (arr[i] < 0)
